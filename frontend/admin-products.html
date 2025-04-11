@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Jonathan Hernandez-Cardenas
+    Date: 02.28.25
+    CSC 372-01
+    
+    This is the admin products page that will let the admin see a all the available products in the store. 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>products</title>
+</head>
+<body class="admin-stuff">
+    <header class="admin-head">
+        <div class="admin-container">
+            <div class="logo">
+                <a href="admin-products.html">
+                    <img src="images/#" alt="logo">
+                </a>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="admin-upload.html">Bulk Upload</a></li>
+                    <li><a href="admin-products.html">Products</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-content">
+        <section class="admin-sec">
+            <h1>Products In Store</h1>
+
+            <div class="product-change">
+                <div class="search-products">
+                    <input type="text" name="search-bar" id="product-search" placeholder="Search Products..">
+                    <select name="Categories" id="cats">
+                        <option value="">All Categories</option>
+                        <option value="1">Marvel</option>
+                        <option value="2">Star Wars</option>
+                        <option value="3">Fast & Furioius</option>
+                        <option value="4">Construction</option>
+                    </select>
+                    <button class="search-btn">Search</button>
+                </div>
+                <a href="product-edit.html" class="btn-end">Add new Product</a>
+            </div>
+
+            <div class="product-listings">
+                <table>
+                    <!--Sets up a table for editting the products, will only have one for the time being.-->
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Pieces</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td><img src="images/LEGO-Star-Wars-Boba-Fett-Mech-75369-Buildable-Star-Wars.jpg" alt="Boba Fet" class="product-img"></td>
+                            <td>Star Wars: Boba Fett</td>
+                            <td>Lego of the character boba fett, a clone that was a assassin in the series</td>
+                            <td>Star Wars</td>
+                            <td>$59.99</td>
+                            <td>356 Pieces</td>
+                            <td class="action-btn">
+                                <a href="product-edit.html" class="edit-btn">Edit</a>
+                                <button class="archive-btn">Archive</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 LEGOSS. All rights reserved. WARNING! Legoss is not responsible if a child injests
+            lego parts, KEEP OUT OF REACH OF CHILDREN UNDER 15.
+        </p>
+    </footer>
+</body>
+</html>

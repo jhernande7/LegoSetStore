@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Jonathan Hernandez-Cardenas
+    Date: 02.07.2-25
+    CSC 372-01
+    
+    This is the products page that at the moment looks similar to the landing page but will be different later on when adding more products.
+    right now it just houses all products.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>All Products</title>
+</head>
+<body>
+    <!-- Container for the nav bar with all links to other pages. -->
+    <header>
+        <nav class="nav-contianer">
+             <a href="index.html" class="logo">LEGOSS</a>
+             <div class="nav-links">
+                <a href="#">Need for Speed</a>
+                <a href="#">Construction</a>
+                <a href="#">Heros</a>
+                <a href="products.html?category=starwars">Star Wars</a>
+                <a href="products.html">All Lego's</a>
+                <a href="cart.html"><img src="images/f2124e83e9fd8ddeb31ac7cdb59f544c.jpg" alt="Cart" width="24"></a>
+             </div>
+        </nav>
+    </header>
+    <!-- main section for all content -->
+    <main>
+        <section class="splash">
+            <h1>Search for Legos</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Legos">
+                <button class="button">Search</button>
+            </div>
+        </section>
+
+        <section class="top-rated products-grid">
+            <article class="products-card">
+                <img src="images/81UDnYzKbXL.jpg" alt="#">
+                <h3>Iron Man</h3>
+                <p>$39.99</p>
+                <a href="details.html" class="button">Details</a>
+            </article>
+            <article class="products-card">
+                <img src="images/LEGO-Star-Wars-Boba-Fett-Mech-75369-Buildable-Star-Wars.jpg" alt="#">
+                <h3>Boba Fett</h3>
+                <p>$59.99</p>
+                <a href="details.html" class="button">Details</a>
+            </article>
+            <article class="products-card">
+                <img src="images/76917.jpeg" alt="#">
+                <h3>Nissan GTR</h3>
+                <p>$79.99</p>
+                <a href="details.html" class="button">Details</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LEGOSS. All rights reserved. WARNING! Legoss is not responsible if a child injests
+            lego parts, KEEP OUT OF REACH OF CHILDREN UNDER 15.
+        </p>
+    </footer>
+</body>
+</html>

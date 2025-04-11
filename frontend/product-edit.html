@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Jonathan Hernandez-Cardenas
+    Date: 02.28.25
+    CSC 372-01
+    
+    This is the edit page for the project. It will let the admin edit a product.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Edit</title>
+</head>
+<body class="admin-stuff">
+    <header class="admin-head">
+        <div class="admin-container">
+            <div class="logo">
+                <a href="admin-products.html">
+                    <img src="images/#" alt="logo">
+                </a>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="admin-upload.html">Bulk Upload</a></li>
+                    <li><a href="admin-products.html">Products</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-content">
+        <section class="admin-sec">
+            <h1>Edit Product</h1>
+
+
+            <!--Edit form for the product -->
+            <form class="edit-form">
+                <div class="form-section">
+                    <label for="product-id">Product ID:</label>
+                    <input type="text" id="product-id" value="001" disabled>
+                    <span class="note">Product ID cannot be changed</span>
+                </div>
+
+                <div class="form-section">
+                    <label for="product-image">Image Path:</label>
+                    <input type="text" id="product-image" value="images/LEGO-Star-Wars-Boba-Fett-Mech-75369-Buildable-Star-Wars.jpg" required>
+                    <span class="form-note">Enter the file path for the image</span>
+                </div>
+
+                <div class="form-section">
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" value="Star Wars: Boba Fett" required>
+                </div>
+
+                <div class="form-section">
+                    <label for="product-description">Product Description:</label>
+                    <textarea name="product-description" id="product-description" rows="5" required>Lego of the character boba fett,
+                         a clone that was a assassin in the series</textarea>
+                </div>
+
+                <div class="form-section">
+                    <label for="product-category">Product Category: </label>
+                    <select name="product-category" id="product-category">
+                        <option value="">Select Category</option>
+                        <option value="1">Marvel</option>
+                        <option value="2">Star wars</option>
+                        <option value="3">Fast & Furious</option>
+                        <option value="4">Construction</option>
+                    </select>
+                </div>
+
+                <div class="form-section">
+                    <label for="product-price">Product Price: </label>
+                    <input type="number" id="product-price" value="59.99" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-actions">
+                    <label for="product-pieces">Product Pieces:</label>
+                    <input type="number" id="product-pieces" value="356" step="1" min="0" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="edit-submit">Save Changes</button>
+                    <a href="admin-products.html" class="edit-cancel">Cancel</a>
+                </div>
+                
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LEGOSS. All rights reserved. WARNING! Legoss is not responsible if a child injests
+            lego parts, KEEP OUT OF REACH OF CHILDREN UNDER 15.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Jonathan Hernandez-Cardenas
+    Date: 02.28.25
+    CSC 372-01
+    
+    This it the cart page for the project. It will hold all the items that the user has added to the cart. PLEASE NOTE: ill be adding a link to the admin pages in
+    this page just so that you can get too it. 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Cart</title>
+</head>
+<body>
+    <!-- Container for the nav bar with all links to other pages. -->
+    <header>
+        <nav class="nav-contianer">
+             <a href="index.html" class="logo">LEGOSS</a>
+             <div class="nav-links">
+                <a href="#">Need for Speed</a>
+                <a href="#">Construction</a>
+                <a href="#">Heros</a>
+                <a href="products.html?category=starwars">Star Wars</a>
+                <a href="products.html">All Lego's</a>
+                <a href="cart.html"><img src="images/f2124e83e9fd8ddeb31ac7cdb59f544c.jpg" alt="Cart" width="24"></a>
+                <a href="admin-products.html">Admin Portal</a>
+             </div>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h1 class="cart-title">You're Cart</h1>
+        <!-- Cart items -->
+        <div class ="cart-item">
+            <div class="item-img">
+                <img src="images/81UDnYzKbXL.jpg" alt="Ironman Lego">
+            </div>
+            <div class="item-info"> 
+                <h3>Marvel set: Ironman lego</h3>
+                <p>$39.99</p>
+                <div class="controls">
+                    <div class="quantity">
+                        <label for="quantity1">Qty: </label>
+                        <input type="number" id="quantity1" name="quantity1" min="1" max="5" value="2">
+                    </div>
+                    <button class="button">Remove</button>
+                </div>
+                <div class = "sub-total">
+                    <h3>total for item: $79.98</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Second cart item -->
+        <div class="cart-item">
+            <div class="item-img">
+                <img src="images/LEGO-Star-Wars-Boba-Fett-Mech-75369-Buildable-Star-Wars.jpg" alt="Boba Fett Lego">
+            </div>
+            <div class="item-info"> 
+                <h3>Star Wars set: Boba Fett lego</h3>
+                <p>$59.99</p>
+                <div class="controls">
+                    <div class="quantity">
+                        <label for="quantity2">Qty: </label>
+                        <input type="number" id="quantity2" name="quantity2" min="1" max="5">
+                    </div>
+                    <button class="button">Remove</button>
+                </div>
+                <div class="sub-total">
+                    <h3>total for item: $59.99</h3>
+                </div>
+            </div>
+        </div>
+        <!-- total calculation -->
+        <div class="total">
+            <div class="total-row">
+                <h3>Total: $139.97</h3>
+            </div>
+
+            <div class="total-row">
+                <h3>Tax: %6.75</h3>
+            </div>
+
+            <div class="total-row">
+                <h3>Delivery Fee: $2</h3>
+            </div>
+
+            <div class="total-row">
+                <h3>Grand Total: $151.41</h3>
+            </div>
+
+        
+            <button class="cart-button">Checkout</button>
+        
+
+        </div>
+    
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LEGOSS. All rights reserved. WARNING! Legoss is not responsible if a child injests
+            lego parts, KEEP OUT OF REACH OF CHILDREN UNDER 15.
+        </p>
+    </footer>
+    
+</body>
+</html>

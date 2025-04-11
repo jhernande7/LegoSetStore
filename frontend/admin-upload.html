@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Jonathan Hernandez-Cardenas
+    Date: 02.28.25
+    CSC 372-01
+    
+    This is the admine upload page for when admin wants too upload a new product to the store.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Upload Product</title>
+</head>
+<body class="admin-stuff">
+    <header class="admin-head">
+        <div class="admin-container">
+            <div class="logo">
+                <a href="admin-products.html">
+                    <img src="images/#" alt="logo">
+                </a>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="admin-upload.html">Bulk Upload</a></li>
+                    <li><a href="admin-products.html">Products</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-content">
+        <section class="admin-sec">
+            <h1>Bulk Upload</h1>
+
+            <div class="instructions">
+                <h2>Upload instructions</h2>
+                <p>Only the file formats JSON, CSV, or TXT files are supported. </p>
+                <article class="file-format">
+                    <h3>Example</h3>
+                    <pre>
+                        {
+                        "Product Name": "NAME",
+                        "Description": "description",
+                        "Product id": "id",
+                        "picture" : "image",
+                        "Bulk Price" : "Price"
+                        }</pre>
+                </article>
+            </div>
+
+            <div class="product-upload">
+                <div class="form-upload">
+                    <label for="file-upload">Browse Computer for File:</label>
+                    <input type="file" id="file-upload" accept=".json,.csv,.txt">
+                </div>
+                <button type="submit" class="submit-btn">Upload Products</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LEGOSS. All rights reserved. WARNING! Legoss is not responsible if a child injests
+            lego parts, KEEP OUT OF REACH OF CHILDREN UNDER 15.
+        </p>
+    </footer>
+</body>
+</html>

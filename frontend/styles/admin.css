@@ -1,0 +1,176 @@
+/*STYLILNG css page for the admin pages.*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body.admin-stuff{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f2f3f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;;
+}
+/* header styles*/
+.admin-head {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+}
+
+.admin-head .admin-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.admin-nav ul {
+    display: flex;
+    list-style: none;
+}
+.admin-nav ul li {
+    margin-left: 20px;
+}
+
+.admin-nav ul li a  {
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.admin-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* main content css*/
+
+.admin-content {
+    padding: 30px 0;
+    min-height: calc(100vh - 140px );
+    background-color: lightgrey;
+}
+.admin-sec {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+.admin-sec h1 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 24px;
+    border-bottom: 1px solid ;
+    padding-bottom: 15px;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+}
+.archive-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.delete-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.search-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* styling for the edit form page*/
+.form-section {
+    margin-bottom: 20px;
+}
+.form-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.form-actions {
+    margin-bottom: 20px;
+}
+
+/* Product upload page styling*/
+.instructions {
+    margin-bottom: 30px;
+}
+.file-format {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    background-color:antiquewhite;
+}
+.file-format pre {
+    white-space: pre-wrap;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* styling for the product listing page*/
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid;
+}
+
+.product-img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+
+
+
+
