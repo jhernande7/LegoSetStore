@@ -169,6 +169,39 @@ table th, table td {
     border-radius: 4px;
 }
 
+/* new styles for scripts */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+.error-message {
+    color: #d01012;
+    background-color: #ffe6e6;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 15px 0;
+    border: 1px solid #d01012;
+}
+
+.form-error {
+    color: #d01012;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+input:invalid {
+    border-color: #d01012;
+}
+
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
 
 
 

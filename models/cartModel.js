@@ -5,7 +5,7 @@ const Cart ={
         return new Promise((resolve, reject) =>{
             db.get(
                 `SELECT * FROM carts WHERE user_id = ? AND status = 'new'
-                ORDER BY created_at DESC LIMIT 1`,
+                ORDER BY created_date DESC LIMIT 1`,
                 userId, 
                 (err, cart) => {
                     if (err) {
@@ -92,7 +92,7 @@ const Cart ={
         return new Promise((resolve, reject) => {
             db.all(
                 `SELECT * FROM carts WHERE user_id = ? 
-                ORDER BY created_at DESC`,
+                ORDER BY created_date DESC`,
                 userId,
                 (err, carts) => {
                     if (err) {

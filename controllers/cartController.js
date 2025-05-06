@@ -5,7 +5,7 @@ import CartProduct from '../models/cartProductModel.js';
 export const getUserCart = async (req, res) => {
     try{
         const userId = parseInt(req.params.userId);
-        if (!NaN(userId)) {
+        if (isNaN(userId)) {
             return res.status(400).json({ message: 'Invalid user ID' });
         }
 
@@ -25,7 +25,9 @@ export const getUserCart = async (req, res) => {
 export const addProductToCart = async (req, res) => {
     try{
         const userId = parseInt(req.params.userId);
-        const { productId, quantity =1} = req.body;
+
+        const productId = req.body.productId;
+        const quantity = req.body.quantity || 1;
 
         if(isNaN(userId)){
             return res.status(400).json({ message: 'Invalid user ID' });
@@ -44,8 +46,11 @@ export const addProductToCart = async (req, res) => {
         // get or create the active cart for the user
         const cart = await Cart.createActiveCart(userId);
         await CartProduct.addProductToCart(cart.id, parsedProductId, parsedQuantity);
+        
+        
         //update the cart
         const updatedCart = await Cart.getCartWithProducts(cart.id);
+       
         res.status(200).json(updatedCart);
     } catch (error) {
         console.error('Error adding product to cart:', error);
@@ -62,7 +67,7 @@ export const updateCartProduct = async (req, res) => {
         if (isNaN(userId)) {
             return res.status(400).json({ message: 'Invalid user ID' });
         }
-        if (!cartProductId || !quantity){
+        if (!cartProductId || isNaN(cartProductId) || !quantity || isNaN(quantity)){
             return res.status(400).json({ message: 'Invalid cart product ID or quantity' });
         }
 

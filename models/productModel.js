@@ -26,20 +26,13 @@ const Product = {
     //getting all products 
     async getAll(limit =20, offset = 0) {
         return new Promise((resolve, reject) => {
-            const searchTerm = `%${query}%`;
-            db.all(
-                `SELECT p.*, c.name as category_name
-                FROM products p
-                JOIN categories c ON p.category_id = c.id
-                WHERE p.name LIKE ? OR p.description LIKE ?
-                LIMIT ? OFFSET ?`,
-                [searchTerm, searchTerm, limit, offset],
-                (err, products) => {
+            const query = `SELECT * FROM products`;
+            db.all(query,[], (err, rows) => {
                     if (err) {
                         reject(err);
                         return;
                     }
-                    resolve(products);
+                    resolve(rows);
                 }
             );
         });

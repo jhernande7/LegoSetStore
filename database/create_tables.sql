@@ -1,7 +1,7 @@
 --sql file for creating tables for database
 
 --User table
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     created_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     name TEXT NOT NULL,
@@ -11,13 +11,13 @@ CREATE TABLE users (
 );
 
 --Category table
-CREATE TABLE categories (
+CREATE TABLE IF NOT EXISTS categories (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL
 );
 
 --Products table
-CREATE TABLE products(
+CREATE TABLE IF NOT EXISTS products(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE products(
 );
 
 --Carts table
-CREATE TABLE carts(
+CREATE TABLE IF NOT EXISTS carts(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     status TEXT NOT NULL CHECK(status IN ('new', 'abandoned', 'purchased')),
     created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -40,7 +40,7 @@ CREATE TABLE carts(
 );
 
 --Cart products table
-CREATE TABLE cart_products(
+CREATE TABLE IF NOT EXISTS cart_products(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     cart_id INTEGER NOT NULL,
     product_id INTEGER NOT NULL,

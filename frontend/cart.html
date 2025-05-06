@@ -20,10 +20,10 @@
         <nav class="nav-contianer">
              <a href="index.html" class="logo">LEGOSS</a>
              <div class="nav-links">
-                <a href="#">Need for Speed</a>
-                <a href="#">Construction</a>
-                <a href="#">Heros</a>
-                <a href="products.html?category=starwars">Star Wars</a>
+                <a href="products.html?category=Need%20for%20Speed">Need for Speed</a>
+                <a href="products.html?category=construction">Construction</a>
+                <a href="products.html?category=heros">Heros</a>
+                <a href="products.html?category=Star%20Wars">Star Wars</a>
                 <a href="products.html">All Lego's</a>
                 <a href="cart.html"><img src="images/f2124e83e9fd8ddeb31ac7cdb59f544c.jpg" alt="Cart" width="24"></a>
                 <a href="admin-products.html">Admin Portal</a>
@@ -33,8 +33,8 @@
 
     <main class="cart-container">
         <h1 class="cart-title">You're Cart</h1>
-        <!-- Cart items -->
-        <div class ="cart-item">
+        
+        <!-- <div class ="cart-item">
             <div class="item-img">
                 <img src="images/81UDnYzKbXL.jpg" alt="Ironman Lego">
             </div>
@@ -53,7 +53,6 @@
                 </div>
             </div>
         </div>
-        <!-- Second cart item -->
         <div class="cart-item">
             <div class="item-img">
                 <img src="images/LEGO-Star-Wars-Boba-Fett-Mech-75369-Buildable-Star-Wars.jpg" alt="Boba Fett Lego">
@@ -73,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <!-- total calculation -->
+       
         <div class="total">
             <div class="total-row">
                 <h3>Total: $139.97</h3>
@@ -95,7 +94,9 @@
             <button class="cart-button">Checkout</button>
         
 
-        </div>
+        </div> CART WILL BE LOADED DYNAMICALLY BY JAVASCRIPT -->
+
+        <div class="loading">Loading your cart...</div>
     
     </main>
 
@@ -105,5 +106,6 @@
         </p>
     </footer>
     
+    <script src="scripts/app.js"></script>
 </body>
 </html>

@@ -40,10 +40,7 @@
                     <input type="text" name="search-bar" id="product-search" placeholder="Search Products..">
                     <select name="Categories" id="cats">
                         <option value="">All Categories</option>
-                        <option value="1">Marvel</option>
-                        <option value="2">Star Wars</option>
-                        <option value="3">Fast & Furioius</option>
-                        <option value="4">Construction</option>
+                        <!-- categories will be loaded dynamically -->
                     </select>
                     <button class="search-btn">Search</button>
                 </div>
@@ -66,7 +63,11 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         <tr>
+                            <td colspan="8" class="loading">Loading products...</td>
+                        </tr>
+                        <!-- <tr>
                             <td>001</td>
                             <td><img src="images/LEGO-Star-Wars-Boba-Fett-Mech-75369-Buildable-Star-Wars.jpg" alt="Boba Fet" class="product-img"></td>
                             <td>Star Wars: Boba Fett</td>
@@ -79,7 +80,7 @@
                                 <button class="archive-btn">Archive</button>
                                 <button class="delete-btn">Delete</button>
                             </td>
-                        </tr>
+                        </tr>  COMMENTING OUT THIS STATIC PRODUCT.-->
                     </tbody>
                 </table>
             </div>
@@ -91,5 +92,8 @@
             lego parts, KEEP OUT OF REACH OF CHILDREN UNDER 15.
         </p>
     </footer>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/admin.js"></script>
 </body>
 </html>

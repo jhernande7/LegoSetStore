@@ -40,7 +40,6 @@ app.use('/uploads', express.static(path.join(__dirname,'uploads')));
 app.use(express.static(path.join(__dirname,'frontend')));
 
 
-
 //using the routes
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);

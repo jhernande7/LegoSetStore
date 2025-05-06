@@ -36,14 +36,15 @@ const db = new sql3.Database('./database/mydb.db', sqlite3.OPEN_READWRITE | sqli
             // check to see if data is present
             db.get(`SELECT COUNT(*) as count FROM categories`, (err, row) => {
                 if (err) {
+                    console.error('Error checking categories table: ' + err.message);
                     seedDatabase();
                 } else if (row.count === 0) {
+                    console.log('No data found in categories table. seeding database...');
                     seedDatabase();
                 } else {
                     console.log('Database already seeded with data.');
                 }
-            
-        });
+            });
     });
 });
 });
@@ -57,6 +58,7 @@ function seedDatabase() {
             console.error('Error reading seed SQL file: ' + err.message);
             return;
         }
+        console.log('Seed SQL FILE read successfully. Executing SQL.');
         db.exec(seedSql, (err) => {
             if (err) {
                 console.error('Error executing seed SQL: ' + err.message);
